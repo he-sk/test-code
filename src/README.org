@@ -1,0 +1,17 @@
+* test_buffer_allocation [2017-05-06 Sa]
+
+- Test number and size of OpenCL buffers that can be allocated according to
+  best practices described by NVIDIA and AMD.
+- [[http://www.nvidia.com/content/cudazone/cudabrowser/downloads/papers/nvidia_opencl_bestpracticesguide.pdf][NVIDIA OpenCL Best Practices Guide]] (version 1.0, §3.1.1, Pinned Memory)
+- [[http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-app-sdk/opencl-optimization-guide/#50401315_pgfId-517669][AMD OpenCL Optimization Guide]] (§1.6.2, Application Scenarios and Recommended OpenCL Paths)
+
+Results:
+- =clCreateBuffer= can accept buffer sizes that exceed the buffer size
+  of the device
+- =CL_MEM_OBJECT_ALLOCATION_FAILURE= is raised on =clEnqueueMapBuffer=
+  and/or =clEnqueueWriterBuffer=
+- It seems that the allocated buffer can exceed
+  =CL_DEVICE_MAX_MEM_ALLOC_SIZE=
+- However, because two buffers are needed, only half of the device
+  memory can be used.
+- Tested on NVIDIA Quadro K2100M [2017-05-04 Do]
