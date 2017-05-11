@@ -1,7 +1,15 @@
+* About
+
 Various small test programs.
 
 License: [[https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt][Creative Commons CC0]]
 
-Contents:
+* Contents
 
-- [[file:src][test-buffer-allocation]] [2017-05-06 Sa]
+** OpenCL
+
+- [[file:opencl/buffer-allocation][test-buffer-allocation]] [2017-05-06 Sa]
+
+** C++
+
+- [[file:cpp/vector-alignment][vector-alignment]] [2017-05-11 Do]
