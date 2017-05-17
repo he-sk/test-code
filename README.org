@@ -13,3 +13,4 @@ License: [[https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt][Crea
 ** C++
 
 - [[file:cpp/vector-alignment][vector-alignment]] [2017-05-11 Do]
+- [[file:cpp/multiply-shift][multiply-shift]] [2017-05-17 Mi]

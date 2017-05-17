@@ -1,0 +1,29 @@
+* multiply-shift [2017-05-06 Sa]
+
+Determine hash bucket for multiplicative hashing for different hash table sizes and multicative constants.
+
+Knuth's constant: 2654435761
+
+Collision:
+
+#+BEGIN_EXAMPLE
+$ ./multiply-shift 128 2654435761 1
+Hash table size: 128 entries (7 bits)
+Word size:       32
+Constant factor: 2654435761
+Key:             1
+Modulus: 4294967296
+Divisor: 33554432
+Index (with modulo and division): 79
+Index (with bit shift):           79
+
+$ ./multiply-shift 128 2654435761 90
+Hash table size: 128 entries (7 bits)
+Word size:       32
+Constant factor: 2654435761
+Key:             90
+Modulus: 4294967296
+Divisor: 33554432
+Index (with modulo and division): 79
+Index (with bit shift):           79
+#+END_EXAMPLE
