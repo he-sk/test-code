@@ -7,4 +7,5 @@ include_directories(
         ${BoostCompute_INCLUDE_DIRS})
 
 add_subdirectory(buffer-allocation)
+add_subdirectory(buffer-reclamation)
 #add_subdirectory(vector-index)
