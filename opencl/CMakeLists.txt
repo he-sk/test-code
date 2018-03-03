@@ -8,4 +8,5 @@ include_directories(
 
 add_subdirectory(buffer-allocation)
 add_subdirectory(buffer-reclamation)
+add_subdirectory(preferred-work-group-size)
 #add_subdirectory(vector-index)
