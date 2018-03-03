@@ -13,7 +13,7 @@ int main(int ac, char** av) {
     return EXIT_FAILURE;
   }
 
-  auto device_id = std::stoi(av[1]);
+  auto device_id = std::stoul(av[1]);
   if (device_id >= bc::system::device_count()) {
     std::cerr << "There are only " << bc::system::device_count() << " devices." << std::endl;
     return EXIT_FAILURE;
